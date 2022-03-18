@@ -18,7 +18,7 @@ node {
     }
 
     stage('livraison dans dockerhub : ') {
-        docker.withRegistry('https://registry.hub.docker.com', 'tpdocker') {
+        docker.withRegistry('https://registry.hub.docker.com','tpdocker') {
             app.push("${env.BUILD_NUMBER}")
             app.push("1.0")
         }

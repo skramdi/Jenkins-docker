@@ -1,11 +1,11 @@
 node {
     def app
 
-    stage('récupération des sources: ') {
+    stage('récupération des sources') {
         checkout scm
     }
 
-    stage('Built de mon application:' ) {
+    stage('Built de mon application' ) {
         app = docker.build("skramdi/tpdocker")
     }
 
